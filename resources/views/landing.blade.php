@@ -11,8 +11,27 @@
                 <div class="lead fw-normal np-0 b-0 g-0">
                     About
                 </div>
-                This dashboard aims to provide the most up to date Information Comissioners Office security incident trends as reported by government
-                organisations and private companies.
+                <p>This dashboard aims to provide the most up to date Information Comissioners Office security incident trends as reported by government
+                    organisations and private companies.</p>
+
+                <p>Data security incidents, which are breaches of the seventh data protection principle or personal data breaches
+                    reported under the Privacy and Electronic Communications Regulations are a major concern for those affected.</p>
+
+                <p>The UK Government body, called the Information Comissioners Office publish this information in non-standardised spreadsheets.
+                    I have taken the time to format this data so that it has normalised and proper data structure.</p>
+
+                <div class="alert alert-secondary mt-1 mb-0 py-1" role="alert">
+                    <div class="small">
+                        <div>
+                            <span class="mdi mdi-bookmark-box-multiple"></span> Contains public sector information licensed under the Open Government Licence v3.0.
+                        </div>
+                        <div>
+                            - You can access this information first hand <a href="https://ico.org.uk/action-weve-taken/data-security-incident-trends/previous-reports/">here</a>.
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             <div class="col-md-6">
                 <div class="lead fw-normal np-0 b-0 g-0">
