@@ -1,3 +1,5 @@
+import { Tooltip, Toast, Popover } from 'bootstrap';
+
 window._ = require('lodash');
 
 /**
