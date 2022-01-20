@@ -31,7 +31,7 @@
                         {{-- This is where we would have a register button if we needed to register users, but we dont because it's not that much  --}}
                         {{-- --}}
                         <li class="nav-item active">
-                            <a class="nav-link" href="/about">Source</a>
+                            <a class="nav-link" href="/about">Source Code</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/application-programming">API</a>
