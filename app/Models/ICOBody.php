@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ICOBodies extends Model
+class ICOBody extends Model
 {
     use HasFactory;
 
@@ -18,5 +18,5 @@ class ICOBodies extends Model
 
 
 
-    
+
 }
