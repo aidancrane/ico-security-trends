@@ -16,8 +16,8 @@ class CreateICOQuartersTable extends Migration
         Schema::create('ico_quarters', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->dateTime('data_range_start', $precision = 0);
-            $table->dateTime('data_range_end', $precision = 0);
+            $table->integer('data_range_start');
+            $table->integer('data_range_end');
             $table->integer('quarter_1234');
         });
     }
