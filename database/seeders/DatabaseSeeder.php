@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Model\ICOBodies;
 use Database\Seeders\ICOBodiesSeeder;
 use Database\Seeders\ICOCategoriesSeeder;
+use Database\Seeders\ICOQuarterSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
       $this->call([
           ICOBodiesSeeder::class,
           ICOCategoriesSeeder::class,
-
+          ICOQuarterSeeder::class,
       ]);
     }
 }

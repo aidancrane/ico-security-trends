@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\ICOQuarterImport;
 
 class ICOQuarterSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class ICOQuarterSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Excel::import(new ICOQuarterImport, 'users.xlsx');
     }
 }
