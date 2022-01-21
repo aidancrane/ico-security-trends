@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', ['as' => 'landing.show', 'uses' => 'App\Http\Controllers\LandingController@Landing']);
+Route::get('/totals', ['as' => 'totals.show', 'uses' => 'App\Http\Controllers\TotalsController@Totals']);

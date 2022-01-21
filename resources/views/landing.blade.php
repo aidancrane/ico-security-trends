@@ -36,7 +36,8 @@
                     </div>
                 </div>
 
-                <p>Data from <b>Q1 2019/2020</b> to <b>Q2 2021/2022</b></p>
+                <p>Data from <b>Q{{ $lowest_q->quarter_1234 }} {{ $lowest_q->data_range_start }}-{{ $lowest_q->data_range_end }}</b>
+                    to <b>Q{{ $highest_q->quarter_1234 }} {{ $highest_q->data_range_start }}-{{ $highest_q->data_range_end }}</b>.</p>
 
             </div>
             <div class="col-md-6">
@@ -46,7 +47,7 @@
                 <p>Use the links below to view the most recent UK Security Incident Trends by Year or by Category</p>
 
                 <ol class="list-group">
-                    <a href="#1" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                    <a href="/totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Total Incidents</div>
                             View a grand total of incidents by Year, Quarter and Category.
