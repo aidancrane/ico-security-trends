@@ -1,10 +1,10 @@
-@extends('layouts.master')
+@extends('layouts.stats')
 
-@section('title', 'Grand Totals')
+@section('title', 'Totals')
 
-@section('content')
-<div class="container">
-
+@section('content-right')
+<div class="container-fluid">
+    Hello World
 </div>
 @stop
 
