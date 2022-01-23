@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', ['as' => 'landing.show', 'uses' => 'App\Http\Controllers\LandingController@Landing']);
-Route::get('/totals', ['as' => 'totals.show', 'uses' => 'App\Http\Controllers\TotalsController@Totals']);
+Route::get('/uk-ico-quarterly-year-totals', ['as' => 'totals.show', 'uses' => 'App\Http\Controllers\TotalsController@Totals']);

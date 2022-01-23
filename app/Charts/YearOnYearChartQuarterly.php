@@ -10,7 +10,7 @@ use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
 
-class YearOnYearChart extends BaseChart
+class YearOnYearChartQuarterly extends BaseChart
 {
     /**
      * Handles the HTTP request for the given chart.
@@ -30,11 +30,14 @@ class YearOnYearChart extends BaseChart
 
       $years = $data_range_start_labels->unique();
 
+      $Q1_incidents = [];
+      $Q2_incidents = [];
+      $Q3_incidents = [];
+      $Q4_incidents = [];
       $total_incidents = [];
 
       foreach ($years as $year) {
         $year_incidents = [];
-
         $this_quarter1_incidents = ICOQuarter::where('data_range_start', $year)->where('quarter_1234', 1)->first();
 
         if ($this_quarter1_incidents != null)
@@ -42,10 +45,11 @@ class YearOnYearChart extends BaseChart
             $this_quarter1_incidents = $this_quarter1_incidents->ICOIncidents()->get();
             $this_quarter1_incidents = $this_quarter1_incidents->pluck('incident_count');
             $q_total = $this_quarter1_incidents->sum();
+            array_push($Q1_incidents, $q_total);
             array_push($year_incidents, $q_total);
         }
         else {
-          array_push($year_incidents, 0);
+          array_push($Q1_incidents, 0);
         }
 
         $this_quarter2_incidents = ICOQuarter::where('data_range_start', $year)->where('quarter_1234', 2)->first();
@@ -55,10 +59,11 @@ class YearOnYearChart extends BaseChart
             $this_quarter2_incidents = $this_quarter2_incidents->ICOIncidents()->get();
             $this_quarter2_incidents = $this_quarter2_incidents->pluck('incident_count');
             $q_total = $this_quarter2_incidents->sum();
+            array_push($Q2_incidents, $q_total);
             array_push($year_incidents, $q_total);
         }
         else {
-          array_push($year_incidents, 0);
+          array_push($Q2_incidents, 0);
         }
 
         $this_quarter3_incidents = ICOQuarter::where('data_range_start', $year)->where('quarter_1234', 3)->first();
@@ -69,10 +74,11 @@ class YearOnYearChart extends BaseChart
             $this_quarter3_incidents = $this_quarter3_incidents->ICOIncidents()->get();
             $this_quarter3_incidents = $this_quarter3_incidents->pluck('incident_count');
             $q_total = $this_quarter3_incidents->sum();
+            array_push($Q3_incidents, $q_total);
             array_push($year_incidents, $q_total);
         }
         else {
-          array_push($year_incidents, 0);
+          array_push($Q3_incidents, 0);
         }
 
         $this_quarter4_incidents = ICOQuarter::where('data_range_start', $year)->where('quarter_1234', 4)->first();
@@ -82,10 +88,11 @@ class YearOnYearChart extends BaseChart
             $this_quarter4_incidents = $this_quarter4_incidents->ICOIncidents()->get();
             $this_quarter4_incidents = $this_quarter4_incidents->pluck('incident_count');
             $q_total = $this_quarter4_incidents->sum();
+            array_push($Q4_incidents, $q_total);
             array_push($year_incidents, $q_total);
         }
         else {
-          array_push($year_incidents, 0);
+          array_push($Q4_incidents, 0);
         }
 
         $sum_of_year = array_sum($year_incidents);
@@ -111,6 +118,10 @@ class YearOnYearChart extends BaseChart
 
         return Chartisan::build()
             ->labels($year_labels)
+            ->dataset('Q1', $Q1_incidents)
+            ->dataset('Q2', $Q2_incidents)
+            ->dataset('Q3', $Q3_incidents)
+            ->dataset('Q4', $Q4_incidents)
             ->dataset('Year Total', $total_incidents);
           //  ->dataset('Sample 2', [3, 2, 1]);
     }

@@ -1,29 +1,36 @@
 @extends('layouts.stats')
 
-@section('title', 'Totals')
+@section('title', 'UK ICO Quarterly Year Totals')
 
 @section('content-right')
-<div class="container-fluid">
-    <!-- Chart's container -->
-    <div id="chart"></div>
-    <!-- Charting library -->
-    {{-- <script src="https://unpkg.com/echarts/dist/echarts.min.js"></script> --}}
-    <!-- Chartisan -->
-    {{-- <script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script> --}}
-    <!-- Your application script -->
+<div class="container-fluid h-75">
+    <div id="chart_year_total"></div>
     <script>
+        // const chart = new Chartisan({
+        //     el: '#chart_year_total',
+        //     url: "@chart('year_on_year_chart')",
+        //     hooks: new ChartisanHooks()
+        //         .title("UK ICO Quarterly Year Totals")
+        //         .tooltip(),
+        // });
+
         const chart = new Chartisan({
-            el: '#chart',
+            el: '#chart_year_total',
             url: "@chart('year_on_year_chart')",
             hooks: new ChartisanHooks()
-                .legend()
-                .tooltip(),
-        });
+                .title("UK ICO Quarterly Year Totals")
+                .legend({
+                    position: 'bottom'
+                })
+                .responsive()
+                .pieColors(),
+        })
     </script>
+    <div class="small text-muted">* {{ $ICOFinalQuarter->data_range_start }} - {{ $ICOFinalQuarter->data_range_end }} may be missing data as it may not have been released yet.
+        <div>Check <a href="/">here</a> to see how current the information is.</div>
+    </div>
 </div>
 @stop
 
 @push('scripts')
-{{-- <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/datatables.js') }}"></script> --}}
 @endpush

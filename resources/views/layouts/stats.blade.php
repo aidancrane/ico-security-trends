@@ -7,10 +7,10 @@
             <ol class="list-group mt-4">
                 <a href="/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
-                        <div class="fw-bold">Landing Page</div>
+                        <div class="fw-bold"><span class="mdi mdi-arrow-left-thin"></span> Back</div>
                     </div>
                 </a>
-                <a href="/totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                <a href="/uk-ico-quarterly-year-totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">Total Incidents</div>
                     </div>
@@ -28,7 +28,9 @@
             </ol>
         </div>
         <div class="col-sm-10">
-            @yield('content-right')
+            <div class="py-2">
+                @yield('content-right')
+            </div>
         </div>
     </div>
 </div>
