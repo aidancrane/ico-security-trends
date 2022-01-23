@@ -16,4 +16,12 @@ class TotalsController extends Controller
        return view('totals')->with('ICOFinalQuarter', $ICOFinalQuarter);
      }
 
+     public function QuarterlyTotals()
+        {
+          // find the highest quarter and lowest quarter imported into the db.
+          $ICOFinalQuarter = ICOQuarter::orderBy('data_range_start', 'desc')->orderBy('quarter_1234', 'desc')->first();
+
+          return view('totals-quarterly')->with('ICOFinalQuarter', $ICOFinalQuarter);
+        }
+
 }

@@ -32,7 +32,8 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
 
         $charts->register([
-            \App\Charts\YearOnYearChart::class
+            \App\Charts\YearOnYearChart::class,
+            \App\Charts\YearOnYearChartQuarterly::class
         ]);
 
     }

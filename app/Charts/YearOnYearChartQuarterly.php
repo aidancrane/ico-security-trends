@@ -34,7 +34,6 @@ class YearOnYearChartQuarterly extends BaseChart
       $Q2_incidents = [];
       $Q3_incidents = [];
       $Q4_incidents = [];
-      $total_incidents = [];
 
       foreach ($years as $year) {
         $year_incidents = [];
@@ -95,9 +94,6 @@ class YearOnYearChartQuarterly extends BaseChart
           array_push($Q4_incidents, 0);
         }
 
-        $sum_of_year = array_sum($year_incidents);
-        array_push($total_incidents, $sum_of_year);
-
       }
 
       $year_labels = [];
@@ -121,8 +117,7 @@ class YearOnYearChartQuarterly extends BaseChart
             ->dataset('Q1', $Q1_incidents)
             ->dataset('Q2', $Q2_incidents)
             ->dataset('Q3', $Q3_incidents)
-            ->dataset('Q4', $Q4_incidents)
-            ->dataset('Year Total', $total_incidents);
+            ->dataset('Q4', $Q4_incidents);
           //  ->dataset('Sample 2', [3, 2, 1]);
     }
 }
