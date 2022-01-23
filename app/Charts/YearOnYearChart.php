@@ -70,6 +70,7 @@ class YearOnYearChart extends BaseChart
 
         if ($this_quarter3_incidents != null)
         {
+            if ($year == 2021 ) {dd("Hello");}
             $this_quarter3_incidents = $this_quarter3_incidents->ICOIncidents()->get();
             $this_quarter3_incidents = $this_quarter3_incidents->pluck('incident_count');
             $q_total = $this_quarter3_incidents->sum();
@@ -94,19 +95,22 @@ class YearOnYearChart extends BaseChart
           array_push($Q4_incidents, 0);
         }
 
+        $sum_of_year = array_sum($year_incidents);
+        array_push($total_incidents, $sum_of_year);
+
       }
 
-      $sum_of_year = array_sum($year_incidents);
-      array_push($total_incidents, $sum_of_year);
       // dd($data_range_start_labels->unique());
       //
       // dd($data_quarter_labels->get());
 
       //dd($data_range_start_labels->toArray());
 
+      // Have to re-base keys to fix chart formatting.
+      $year_labels = array_values($years->toArray());
 
         return Chartisan::build()
-            ->labels($years->toArray())
+            ->labels($year_labels)
             ->dataset('Q1', $Q1_incidents)
             ->dataset('Q2', $Q2_incidents)
             ->dataset('Q3', $Q3_incidents)
