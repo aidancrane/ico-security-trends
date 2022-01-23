@@ -15,6 +15,9 @@
         const chart = new Chartisan({
             el: '#chart',
             url: "@chart('year_on_year_chart')",
+            hooks: new ChartisanHooks()
+                .legend()
+                .tooltip(),
         });
     </script>
 </div>
