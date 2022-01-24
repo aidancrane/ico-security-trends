@@ -6,14 +6,6 @@
 <div class="container-fluid h-75">
     <div id="chart_year_total"></div>
     <script>
-        // const chart = new Chartisan({
-        //     el: '#chart_year_total',
-        //     url: "@chart('year_on_year_chart')",
-        //     hooks: new ChartisanHooks()
-        //         .title("UK ICO Quarterly Year Totals")
-        //         .tooltip(),
-        // });
-
         const chart = new Chartisan({
             el: '#chart_year_total',
             url: "@chart('year_on_year_chart')",

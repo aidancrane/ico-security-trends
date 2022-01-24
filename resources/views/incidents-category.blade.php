@@ -1,16 +1,16 @@
 @extends('layouts.stats')
 
-@section('title', 'UK ICO Quarterly Year Totals')
+@section('title', 'UK ICO Incidents by Category')
 
 @section('content-right')
 <div class="container-fluid h-75">
-    <div id="chart_year_total"></div>
+    <div id="chart_incidents_by_category"></div>
     <script>
         const chart = new Chartisan({
-            el: '#chart_year_total',
-            url: "@chart('year_on_year_chart_quarterly')",
+            el: '#chart_incidents_by_category',
+            url: "@chart('incidents_by_category_chart')",
             hooks: new ChartisanHooks()
-                .title("UK ICO Quarterly Year Totals")
+                .title("UK ICO Incidents by Category")
                 .legend({
                     position: 'bottom'
                 })
