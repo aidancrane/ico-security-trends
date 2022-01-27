@@ -8,6 +8,7 @@ use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
 use App\Models\ICOQuarter;
+use App\Models\ICOIncidentCount;
 
 class IncidentsByCategoryChart extends BaseChart
 {
@@ -34,6 +35,17 @@ class IncidentsByCategoryChart extends BaseChart
 
 
       // Now with a list of years for each year, get a list of incidents.
+
+      for ($x = 0; $x <= ($years->count() - 1); $x++) {
+          $year = $years->values()->get($x);
+          $this_years_quarters = ICOQuarter::where('data_range_start', $year)->get();
+          $this_years_incidents = collect([]);
+          foreach ($this_years_quarters as $quarter) {
+            $this_years_incidents = $this_years_incidents->concat($quarter->ICOIncidents()->get());
+          }
+
+      }
+
 
         return Chartisan::build()
             ->labels($year_labels)
