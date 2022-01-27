@@ -20,7 +20,7 @@
                         <div class="fw-bold">Quarterly Total Incidents</div>
                     </div>
                 </a>
-                <a href="#2" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                <a href="/uk-ico-incidents-by-category" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">Incidents by Category</div>
                     </div>

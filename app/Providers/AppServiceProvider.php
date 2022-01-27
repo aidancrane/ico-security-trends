@@ -33,7 +33,8 @@ class AppServiceProvider extends ServiceProvider
 
         $charts->register([
             \App\Charts\YearOnYearChart::class,
-            \App\Charts\YearOnYearChartQuarterly::class
+            \App\Charts\YearOnYearChartQuarterly::class,
+            \App\Charts\IncidentsByCategoryChart::class
         ]);
 
     }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ICOQuarter;
 
-class TotalsController extends Controller
+class ChartController extends Controller
 {
 
      public function Totals()
@@ -24,7 +24,7 @@ class TotalsController extends Controller
         return view('totals-quarterly')->with('ICOFinalQuarter', $ICOFinalQuarter);
      }
 
-     public function IncidentsCategory()
+     public function CategoryTotals()
      {
         // find the highest quarter and lowest quarter imported into the db.
         $ICOFinalQuarter = ICOQuarter::orderBy('data_range_start', 'desc')->orderBy('quarter_1234', 'desc')->first();
