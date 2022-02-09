@@ -47,22 +47,19 @@
                 <p>Use the links below to view the most recent UK Security Incident Trends by Year or by Category</p>
 
                 <ol class="list-group">
-                    <a href="/uk-ico-quarterly-year-totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                    <a href="/uk-ico-annual-year-totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Total Incidents</div>
-                            View a grand total of incidents by Year, Quarter and Category.
                         </div>
                     </a>
-                    <a href="#2" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                    <a href="/uk-ico-quarterly-year-totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Quarterly Total Incidents</div>
+                        </div>
+                    </a>
+                    <a href="/uk-ico-incidents-by-category" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Incidents by Category</div>
-                            View a list of incidents reported to the ICO by category.
-                        </div>
-                    </a>
-                    <a href="#3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Incidents by Year</div>
-                            View a list of incidents reported to the ICO by year.
                         </div>
                     </a>
                 </ol>

@@ -3,7 +3,7 @@
 @section('title', 'UK ICO Incidents by Category')
 
 @section('content-right')
-<div class="container-fluid h-50">
+<div class="container-fluid h-100">
 
     <div id="chart_incidents_by_category">
         <script>
@@ -13,29 +13,11 @@
                 hooks: new ChartisanHooks()
                     .title("UK ICO Incidents by Category")
                     .legend({
-                        position: 'bottom'
+                        position: 'top',
+                        align: 'start'
                     })
                     .responsive()
-                    .borderColors()
-                    .datasets([{
-                        type: 'line',
-                        fill: false
-                    }]),
-            })
-        </script>
-    </div>
-    <div id="chart_incidents_by_category_2">
-        <script>
-            const chart2 = new Chartisan({
-                el: '#chart_incidents_by_category_2',
-                url: "@chart('incidents_by_category_chart')",
-                hooks: new ChartisanHooks()
-                    .title("UK ICO Incidents by Category")
-                    .legend({
-                        position: 'bottom'
-                    })
-                    .responsive()
-                    .borderColors()
+                    .colors()
                     .datasets([{
                         type: 'bar',
                         fill: false
@@ -43,9 +25,10 @@
             })
         </script>
     </div>
-    <div class="small text-muted">* {{ $ICOFinalQuarter->data_range_start }} - {{ $ICOFinalQuarter->data_range_end }} may be missing data as it may not have been released yet.
-        <div>Check <a href="/">here</a> to see how current the information is.</div>
-    </div>
+</div>
+<div class="small text-muted">* {{ $ICOFinalQuarter->data_range_start }} - {{ $ICOFinalQuarter->data_range_end }} may be missing data as it may not have been released yet.
+    <div>Check <a href="/">here</a> to see how current the information is.</div>
+</div>
 </div>
 @stop
 

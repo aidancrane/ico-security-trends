@@ -25,11 +25,6 @@
                         <div class="fw-bold">Incidents by Category</div>
                     </div>
                 </a>
-                <a href="#3" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Incidents by Year</div>
-                    </div>
-                </a>
             </ol>
         </div>
         <div class="col-sm-10">

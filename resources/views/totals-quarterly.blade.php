@@ -11,6 +11,7 @@
             url: "@chart('year_on_year_chart_quarterly')",
             hooks: new ChartisanHooks()
                 .title("UK ICO Quarterly Year Totals")
+                .colors()
                 .legend({
                     position: 'bottom'
                 })
