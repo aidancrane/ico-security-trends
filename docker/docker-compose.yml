@@ -1,0 +1,48 @@
+version: '3'
+services:
+
+  #Nginx Service
+  ico-security-trends-webserver:
+    image: nginx:alpine
+    container_name: ico-security-trends-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+    #  - ./:/var/www
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - ico-security-trends-network
+    links:
+        - php
+php:
+    image: php:8.1-fpm
+  #MySQL Service
+  ico-security-trends-mysql-db:
+    image: mysql
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ico-security-trends-dbdata:/var/lib/mysql/
+      #- ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - ico-security-trends-network
+
+#Docker Networks
+networks:
+  ico-security-trends-network:
+    driver: bridge
+#Volumes
+volumes:
+  ico-security-trends-dbdata:
+    driver: local
