@@ -1,12 +1,17 @@
 FROM php:8.0-fpm
 
-RUN echo "Started Dockerfile"
 
+RUN echo "Started Dockerfile"
 
 RUN echo "Copying composer.json and composer.lock to container"
 
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
+
+COPY .docker/wait-for-it.sh /usr/local/bin/wait-for-it.sh
+COPY .docker/init-app.sh /usr/local/bin/init-app.sh
+RUN chmod +x /usr/local/bin/wait-for-it.sh
+RUN chmod +x /usr/local/bin/init-app.sh
 
 RUN echo "Set WORKDIR"
 
@@ -83,4 +88,4 @@ COPY --chown=www:www ../. /var/www
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 
-CMD ["php-fpm"]
+ENTRYPOINT ["/bin/bash", "-c", "/usr/local/bin/init-app.sh"]

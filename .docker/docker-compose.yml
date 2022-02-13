@@ -6,7 +6,7 @@ services:
     build:
       context: ../
       dockerfile: .docker/Dockerfile
-    image: "icoappaidan"
+    #image: "icoappaidan"
     container_name: app
     restart: unless-stopped
     tty: true
@@ -14,6 +14,8 @@ services:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
     working_dir: /var/www
+    links:
+      - db
     volumes:
       - ../:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini:ro
@@ -44,8 +46,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_DATABASE: ico_data_security_trends
+      MYSQL_USER: ico_data_security_trends
+      MYSQL_PASSWORD: ")HuN3oA_T]AVfr]w"
+      MYSQL_ROOT_PASSWORD: "notreal"
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
