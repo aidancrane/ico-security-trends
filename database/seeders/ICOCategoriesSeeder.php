@@ -17,7 +17,7 @@ class ICOCategoriesSeeder extends Seeder
     public function run()
     {
 
-            $collection = Excel::toCollection(new ICODataSheetImport, 'data\categories.xlsx');
+            $collection = Excel::toCollection(new ICODataSheetImport, storage_path("/data/categories.xlsx"));
             $categories_sheet = $collection[1];
 
             // Start at 1 and ignore header.

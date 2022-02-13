@@ -19,7 +19,7 @@ class ICOBodiesSeeder extends Seeder
 
       // Probably a better way to do this.
 
-      $collection = Excel::toCollection(new ICODataSheetImport, 'data\categories.xlsx');
+      $collection = Excel::toCollection(new ICODataSheetImport, storage_path("/data/categories.xlsx"));
       $bodies_sheet = $collection[2];
 
       $bodies = [];
