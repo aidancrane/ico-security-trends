@@ -14,6 +14,7 @@
                 .legend({
                     position: 'bottom'
                 })
+                .colors()
                 .responsive(),
         })
     </script>

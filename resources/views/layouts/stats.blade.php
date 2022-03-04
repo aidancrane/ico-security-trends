@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row h-75">
-        <div class="col-sm-2">
+<div class="flex-fill">
+    <div class="row g-0">
+        <div class="col-sm-2 gx-0">
             <ol class="list-group mt-4">
                 <a href="/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
@@ -27,8 +27,8 @@
                 </a>
             </ol>
         </div>
-        <div class="col-sm-10">
-            <div class="py-2">
+        <div class="col-sm-10 gx-0 min-vh-100">
+            <div class="px-2">
                 @yield('content-right')
             </div>
         </div>

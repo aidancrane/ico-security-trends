@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="lead fw-normal np-0 b-0 g-0">
-                    About {{ time() }}
+                    About
                 </div>
                 <p>This dashboard aims to provide the most up to date Information Comissioners Office security incident trends as reported by government
                     organisations and private companies.</p>
