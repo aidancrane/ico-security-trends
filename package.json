@@ -10,19 +10,19 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
+        "axios": "^0.26",
+        "laravel-mix": "^6.0.43",
+        "lodash": "^4.17.21",
+        "postcss": "^8.4.8",
         "resolve-url-loader": "^5.0.0"
     },
     "dependencies": {
         "@chartisan/chartjs": "^2.1.0",
         "@mdi/font": "^6.5.95",
-        "@popperjs/core": "^2.11.2",
+        "@popperjs/core": "^2.11.3",
         "bootstrap": "^5.1.3",
-        "chart.js": "^2.9.4",
-        "sass": "^1.49.0",
-        "sass-loader": "^12.4.0"
+        "chart.js": "^3.7.1",
+        "sass": "^1.49.9",
+        "sass-loader": "^12.6.0"
     }
 }

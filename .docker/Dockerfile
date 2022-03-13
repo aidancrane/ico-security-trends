@@ -27,7 +27,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 
 # Install php extensions
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
-    install-php-extensions mbstring pdo_mysql zip exif pcntl gd memcached
+    install-php-extensions mbstring pdo_mysql zip exif pcntl gd
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -64,6 +64,15 @@ RUN echo "Installing composer"
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install Node
+RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash - \
+      && apt-get install -y nodejs
+
+# Update npm to last version
+RUN npm i -g npm
+
+RUN npm i -g npm-check-updates
 
 RUN echo "Adding laravel user"
 
