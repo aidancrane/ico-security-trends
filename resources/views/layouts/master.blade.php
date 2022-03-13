@@ -80,11 +80,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <span class="text-muted"><span class="mdi mdi-bookmark-box-multiple"></span> Contains public sector information licensed under the Open Government Licence v3.0</span>
+                <div>
+                    <span class="text-muted"><span class="mdi mdi-bookmark-box-multiple"></span> Contains public sector information licensed under the Open Government Licence v3.0</span>
+                </div>
+                <div>
+                    <span class="text-muted"><span class="mdi mdi-web"></span> Maintained by <i><a href="https://infinityflame.co.uk">Aidan Crane</a></i> and contributors</span>
+                </div>
             </div>
             <div class="col-md-3">
                 <div>
-                    <span class="text-muted"><span class="mdi mdi-progress-check"></span> Version <b>{{ env('ICO_VERSION', 'missing') }}</b></span>
+                    <span class="text-muted"><span class="mdi mdi-progress-check"></span> Version <b>{{ env('ICO_VERSION', '0.0.1') }}</b></span>
                 </div>
                 <div>
                     <span class="text-muted"><span class="mdi mdi-cached"></span> Cached at <b>{{ time() }}</b></span>
