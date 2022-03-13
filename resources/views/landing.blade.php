@@ -11,13 +11,13 @@
                 <div class="lead fw-normal np-0 b-0 g-0">
                     About
                 </div>
-                <p>This dashboard aims to provide the most up to date Information Comissioners Office security incident trends as reported by government
+                <p>This dashboard aims to provide the most up to date Information Commissioners Office security incident trends as reported by government
                     organisations and private companies.</p>
 
                 <p>Data security incidents, which are breaches of the seventh data protection principle or personal data breaches
                     reported under the Privacy and Electronic Communications Regulations are a major concern for those affected.</p>
 
-                <p>The UK Government body, called the Information Comissioners Office publish this information in non-standardised spreadsheets.
+                <p>The UK Government body, called the Information Commissioners Office publish this information in non-standardised spreadsheets.
                     I have taken the time to format this data so that it has normalised and proper data structure.</p>
 
                 <div class="alert alert-secondary mt-1 mb-1 py-1" role="alert">
@@ -37,7 +37,8 @@
                 </div>
 
                 <p>Data from <b>Q{{ $lowest_q->quarter_1234 }} {{ $lowest_q->data_range_start }}-{{ $lowest_q->data_range_end }}</b>
-                    to <b>Q{{ $highest_q->quarter_1234 }} {{ $highest_q->data_range_start }}-{{ $highest_q->data_range_end }}</b>.</p>
+                    to <b>Q{{ $highest_q->quarter_1234 }} {{ $highest_q->data_range_start }}-{{ $highest_q->data_range_end }}</b>.
+                    Further data for the latest quarter may be available on the official website.</p>
 
             </div>
             <div class="col-md-6">
