@@ -32,13 +32,13 @@
                             {{-- This is where we would have a register button if we needed to register users, but we dont because it's not that much  --}}
                             {{-- --}}
                             <li class="nav-item active">
-                                <a class="nav-link" href="/about">Source Code</a>
+                                <a class="nav-link" href="https://github.com/aidancrane/ico-security-trends">Source Code</a>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="/application-programming">API</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="/privacy">Privacy Policy</a>
+                                <a class="nav-link" href="/privacy-policy">Privacy Policy</a>
                             </li>
                         </ul>
                         {{-- More buttons we don't need  --}}

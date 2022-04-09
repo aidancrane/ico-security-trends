@@ -78,17 +78,21 @@
 
                     <ul class="list my-0 py-0">
                         <li>
-                            The most reported cyber security incident to the UK ICO is categorised as <span title="{{ $most_reported_crime_category->definition }}"><b>{{ $most_reported_crime_category->category }}</b></span>
+                            The most prominent cyber incident is categorised as; <span title="{{ $most_reported_crime_category->definition }}"><b>{{ $most_reported_crime_category->category }}</b></span>
                         </li>
                         <li>
-                            So far there have been <b>{{ $sum_of_this_years_incidents }}</b> security incidents reported to the UK ICO for this years quarters*
+
+                            The sector with the most cyber incidents is; <span title="{{ $most_reported_crime_body->body_category }}"><b>{{ $most_reported_crime_body->body_category }}</b></span>
                         </li>
                         <li>
-                            Last year there were <b>{{ $sum_of_last_years_incidents }}</b> security incidents reported to the UK ICO*
+                            So far there have been <b>{{ $sum_of_this_years_incidents }}</b> security incidents reported this year *
+                        </li>
+                        <li>
+                            Last year there were <b>{{ $sum_of_last_years_incidents }}</b> security incidents reported **
                         </li>
                     </ul>
 
-                    <small>*<i> Data annualised, ~{{ $last_year-1 }}-{{ $last_year }}</i></small>
+                    <small><i> ** Data annualised, * ~{{ $last_year-1 }}-{{ $last_year }}</i></small>
                 </div>
             </div>
         </div>

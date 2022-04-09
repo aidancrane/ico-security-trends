@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ICOQuarter;
 use App\Models\ICOIncidentCount;
 use App\Models\ICOCategory;
+use App\Models\ICOBody;
 
 class LandingController extends Controller
 {
@@ -17,13 +18,12 @@ class LandingController extends Controller
        $highest_q = ICOQuarter::orderBy('data_range_end', 'desc')->orderBy('quarter_1234', 'desc')->first();
        $lowest_q = ICOQuarter::orderBy('data_range_end', 'asc')->orderBy('quarter_1234', 'asc')->first();
 
-       $most_reported_crime_category = ICOIncidentCount::all()->sum('incident_count');
-
        //Get a list of categories,
        $data_categories = ICOCategory::all();
        $data_incidents = ICOIncidentCount::all();
 
        $category_incident_counts_by_id = [];
+       $body_incident_counts_by_id = [];
 
        for ($y = 0; $y <= ($data_categories->count() - 1); $y++) {
          $this_category = $data_categories->values()->get($y);
@@ -33,12 +33,20 @@ class LandingController extends Controller
              $this_incident = $data_incidents->values()->get($z);
              //dd($this_incident);
              $this_incident_category_id = $this_incident['ico_category_id'];
+             $this_incident_body_id = $this_incident['ico_body_id'];
 
              if(isset($category_incident_counts_by_id[$this_incident_category_id])){
                 $category_incident_counts_by_id[$this_incident_category_id] = $category_incident_counts_by_id[$this_incident_category_id] + $this_incident['incident_count'];
              }
              else {
                $category_incident_counts_by_id[$this_incident_category_id] = $this_incident['incident_count'];
+             }
+
+             if(isset($body_incident_counts_by_id[$this_incident_body_id])){
+                $body_incident_counts_by_id[$this_incident_body_id] = $body_incident_counts_by_id[$this_incident_body_id] + $this_incident['incident_count'];
+             }
+             else {
+               $body_incident_counts_by_id[$this_incident_body_id] = $this_incident['incident_count'];
              }
 
          }
@@ -57,10 +65,14 @@ class LandingController extends Controller
 
        $most_reported_crime_category_id = array_search(max($category_incident_counts_by_id), $category_incident_counts_by_id);
        $most_reported_crime_category = ICOCategory::where('id', $most_reported_crime_category_id)->first();
-       //dd($most_reported_crime_category);
+
+       $most_reported_crime_body_id = array_search(max($body_incident_counts_by_id), $body_incident_counts_by_id);
+       $most_reported_crime_body = ICOBody::where('id', $most_reported_crime_body_id)->first();
+
        return view('landing')->with('highest_q', $highest_q)
        ->with('lowest_q', $lowest_q)
        ->with('most_reported_crime_category', $most_reported_crime_category)
+       ->with('most_reported_crime_body', $most_reported_crime_body)
        ->with('sum_of_this_years_incidents', $sum_of_this_years_incidents)
        ->with('last_year', date("Y") - 1)
        ->with('sum_of_last_years_incidents', $sum_of_last_years_incidents);
