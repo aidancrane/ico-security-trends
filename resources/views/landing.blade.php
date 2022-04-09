@@ -11,10 +11,10 @@
                 <div class="lead fw-normal np-0 b-0 g-0">
                     About
                 </div>
-                <p>This dashboard aims to provide the most up to date Information Commissioners Office security incident trends as reported by government
+                <p>This dashboard aims to provide the most up to date information from the Information Commissioners Office (ICO) security incident reports submitted by government
                     organisations and private companies.</p>
 
-                <p>Data security incidents are specifically breaches of the seventh data protection principle or personal data breaches
+                <p>Data security incidents are breaches of the seventh data protection principle or personal data breaches
                     reported under the Privacy and Electronic Communications Regulations and a major concern for those affected.</p>
 
                 <p>The UK Government body, called the Information Commissioners Office publish this information in non-standardised spreadsheets.
@@ -30,7 +30,7 @@
                                 <span class="mdi mdi-book-search"></span> You can access this information first-hand <a href="https://ico.org.uk/action-weve-taken/data-security-incident-trends/previous-reports/">here</a>
                             </li>
                             <li>
-                                <span class="mdi mdi-license"></span> Alternatively you can read the terms of the licence <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
+                                <span class="mdi mdi-license"></span> You can read the terms of the OGL v3.0 licence <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
                             </li>
                             <li>
                                 <span class="mdi mdi-rotate-left"></span> Data from <b>Q{{ $lowest_q->quarter_1234 }} {{ $lowest_q->data_range_start }}-{{ $lowest_q->data_range_end }}</b>
