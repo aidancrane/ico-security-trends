@@ -32,5 +32,13 @@ class ChartController extends Controller
         return view('incidents-category')->with('ICOFinalQuarter', $ICOFinalQuarter);
      }
 
+     public function SectorTotals()
+     {
+        // find the highest quarter and lowest quarter imported into the db.
+        $ICOFinalQuarter = ICOQuarter::orderBy('data_range_start', 'desc')->orderBy('quarter_1234', 'desc')->first();
+
+        return view('incidents-sector')->with('ICOFinalQuarter', $ICOFinalQuarter);
+     }
+
 
 }

@@ -17,3 +17,4 @@ Route::get('/', ['as' => 'landing.show', 'uses' => 'App\Http\Controllers\Landing
 Route::get('/uk-ico-annual-year-totals', ['as' => 'totals.show', 'uses' => 'App\Http\Controllers\ChartController@Totals']);
 Route::get('/uk-ico-quarterly-year-totals', ['as' => 'quarterlytotals.show', 'uses' => 'App\Http\Controllers\ChartController@QuarterlyTotals']);
 Route::get('/uk-ico-incidents-by-category', ['as' => 'categorytotals.show', 'uses' => 'App\Http\Controllers\ChartController@CategoryTotals']);
+Route::get('/uk-ico-incidents-by-sector', ['as' => 'sectortotals.show', 'uses' => 'App\Http\Controllers\ChartController@SectorTotals']);
