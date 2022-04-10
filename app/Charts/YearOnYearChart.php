@@ -65,7 +65,6 @@ class YearOnYearChart extends BaseChart
 
         if ($this_quarter3_incidents != null)
         {
-            if ($year == 2021 ) {dd("Hello");}
             $this_quarter3_incidents = $this_quarter3_incidents->ICOIncidents()->get();
             $this_quarter3_incidents = $this_quarter3_incidents->pluck('incident_count');
             $q_total = $this_quarter3_incidents->sum();

@@ -10,9 +10,9 @@ use App\Models\ICOBody;
 
 class PagesController extends Controller
 {
-  public function PrivacyPolicy()
+  public function About()
   {
-     return view('privacy');
+     return view('about');
   }
 
 }

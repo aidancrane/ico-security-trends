@@ -38,7 +38,7 @@
                                 <a class="nav-link" href="/application-programming">API</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="/privacy-policy">Privacy Policy</a>
+                                <a class="nav-link" href="/about">About</a>
                             </li>
                         </ul>
                         {{-- More buttons we don't need  --}}
