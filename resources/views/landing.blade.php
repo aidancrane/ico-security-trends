@@ -8,18 +8,10 @@
     <div class="pt-3">
         <div class="row">
             <div class="col-md-6">
-                <div class="lead fw-normal np-0 b-0 g-0">
+                <div class="h2 fw-normal np-0 b-0 g-0">
                     About
                 </div>
-                <p>This dashboard aims to provide the most up to date information from the Information Commissioners Office (ICO) security incident reports submitted by government
-                    organisations and private companies.</p>
-
-                <p>Data security incidents are breaches of the seventh data protection principle or personal data breaches
-                    reported under the Privacy and Electronic Communications Regulations and a major concern for those affected.</p>
-
-                <p>The UK Government body, called the Information Commissioners Office publish this information in non-standardised spreadsheets.
-                    This website breaks down the information collated to provide insight and overview of the data contained inside the spreadsheets.</p>
-
+                @include('components.about-blurb')
                 <div class="alert alert-secondary mt-1 mb-1 py-1" role="alert">
                     <div class="small my-0 py-0">
                         <ul class="list-unstyled my-0 py-0">
@@ -41,8 +33,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="lead fw-normal np-0 b-0 g-0">
-                    Explore Security Incident Trends
+                <div class="h2 fw-normal np-0 b-0 g-0">
+                    See Security Incident Trends
                 </div>
                 <p>Use the links below to view the most recent UK Security Incident Trends by Year or by Category</p>
 
@@ -72,17 +64,17 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="lead fw-normal np-0 b-0 g-0 pt-2">
+                    <div class="h2 fw-normal np-0 b-0 g-0 pt-2">
                         Quick Statistics
                     </div>
 
                     <ul class="list my-0 py-0">
                         <li>
-                            The most prominent cyber incident is categorised as; <span title="{{ $most_reported_crime_category->definition }}"><b>{{ $most_reported_crime_category->category }}</b></span>
+                            The most prominent cyber incident is categorised as <span title="{{ $most_reported_crime_category->definition }}"><b>{{ $most_reported_crime_category->category }}</b></span>
                         </li>
                         <li>
 
-                            The sector with the most cyber incidents is; <span title="{{ $most_reported_crime_body->body_category }}"><b>{{ $most_reported_crime_body->body_category }}</b></span>
+                            The sector with the most cyber incidents is <span title="{{ $most_reported_crime_body->body_category }}"><b>{{ $most_reported_crime_body->body_category }}</b></span>
                         </li>
                         <li>
                             So far there have been <b>{{ $sum_of_this_years_incidents }}</b> security incidents reported this year *

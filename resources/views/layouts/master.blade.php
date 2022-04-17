@@ -13,7 +13,7 @@
     <div id="page-container">
         @section('header')
         <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
                 <div class="container-fluid">
                     <a class="navbar-brand p-0 g-0 b-0" href="/">
                         <div class="d-flex g-0 p-0 b-0">
@@ -32,7 +32,7 @@
                             {{-- This is where we would have a register button if we needed to register users, but we dont because it's not that much  --}}
                             {{-- --}}
                             <li class="nav-item active">
-                                <a class="nav-link" href="https://github.com/aidancrane/ico-security-trends">Source Code</a>
+                                <a class="nav-link" href="https://github.com/aidancrane/ico-security-trends">Source Code <span class="mdi mdi-launch"></span></a>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="/application-programming">API</a>
@@ -57,7 +57,7 @@
             </nav>
         </header>
         @show
-        <main class="flex-fill">
+        <main class="flex-fill text-main">
             @yield('content')
         </main>
     </div>
@@ -76,7 +76,7 @@
         width: 100%;
     }
 </style>
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-9">

@@ -2,3 +2,12 @@
 
 // Material Design Fonts
 @import '~@mdi/font/scss/materialdesignicons';
+
+body {
+  background-color: #212529;
+}
+
+.text-main {
+  font-family: monospace;
+  color: #adb5bd;
+}

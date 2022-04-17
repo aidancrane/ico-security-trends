@@ -8,6 +8,10 @@
     <div class="pt-3">
         <div class="row">
             <div class="col">
+                <div class="h2 fw-normal np-0 b-0 g-0">
+                    About
+                </div>
+                @include('components.about-blurb')
                 <h3>Privacy Policy</h3>
                 I use Google Analytics to track user behavior across the website.
                 <br>

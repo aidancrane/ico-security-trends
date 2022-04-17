@@ -38306,4 +38306,12 @@ textarea.form-control-lg {
     transform: rotate(359deg);
   }
 }
+body {
+  background-color: #212529;
+}
+
+.text-main {
+  font-family: monospace;
+  color: #adb5bd;
+}
 
