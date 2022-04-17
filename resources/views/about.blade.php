@@ -12,8 +12,13 @@
                     About
                 </div>
                 @include('components.about-blurb')
+                <p>I made this page to increase consciousness about security and provide some alternative visualisations of incident data.</p>
+
+                <p>I have tried my best to transpose the data from the spreadsheets provided into a standardised database,
+                    however if you spot an inconsistency please open a GitHub issue using the link at the top of the page.</p>
+
                 <h3>Privacy Policy</h3>
-                I use Google Analytics to track user behavior across the website.
+                I use Google Analytics to track user behaviour across the website.
                 <br>
                 To opt out of being tracked by Google Analytics across all websites, visit <a href="http://tools.google.com/dlpage/gaoptout">this link</a>.
                 <br>
@@ -26,6 +31,5 @@
 @stop
 
 @push('scripts')
-{{-- <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/datatables.js') }}"></script> --}}
+{{-- No extra scripts :) --}}
 @endpush

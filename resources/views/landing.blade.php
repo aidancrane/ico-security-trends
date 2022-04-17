@@ -8,7 +8,7 @@
     <div class="pt-3">
         <div class="row">
             <div class="col-md-6">
-                <div class="h2 fw-normal np-0 b-0 g-0">
+                <div class="h2 fw-normal np-0 b-0 g-0 pt-2">
                     About
                 </div>
                 @include('components.about-blurb')
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="h2 fw-normal np-0 b-0 g-0">
+                <div class="h2 fw-normal np-0 b-0 g-0 pt-2">
                     See Security Incident Trends
                 </div>
                 <p>Use the links below to view the most recent UK Security Incident Trends by Year or by Category</p>
@@ -61,10 +61,13 @@
                     </a>
                 </ol>
             </div>
-
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="h2 fw-normal np-0 b-0 g-0 pt-2">
+                    <div class="h2 fw-normal np-0 b-0 g-0 pt-3">
                         Quick Statistics
                     </div>
 
@@ -77,14 +80,14 @@
                             The sector with the most cyber incidents is <span title="{{ $most_reported_crime_body->body_category }}"><b>{{ $most_reported_crime_body->body_category }}</b></span>
                         </li>
                         <li>
-                            So far there have been <b>{{ $sum_of_this_years_incidents }}</b> security incidents reported this year *
+                            So far there have been <b>{{ $sum_of_this_years_incidents }}</b> security incidents reported this year * **
                         </li>
                         <li>
                             Last year there were <b>{{ $sum_of_last_years_incidents }}</b> security incidents reported **
                         </li>
                     </ul>
 
-                    <small><i> ** Data annualised, * ~{{ $last_year-1 }}-{{ $last_year }}</i></small>
+                    <span class="text-secondary"><small><i> ** Data annualised as incidents are reported by quarter, * ~{{ $last_year-1 }}-{{ $last_year }}</i></small></span>
                 </div>
             </div>
         </div>
