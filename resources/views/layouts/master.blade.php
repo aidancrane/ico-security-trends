@@ -7,6 +7,14 @@
     @stack('scripts')
     <link rel="icon" href="{{ asset('images/favicon.svg') }}" sizes="any" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="UK ICO Security Incident Trends">
+    <meta name="description" content="Security incident reports submitted by government organisations and private companies displayed on graphs and charts year on year.">
+    <meta name="keywords" content="security, data protection, UK ICO, incident reporting">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Aidan Crane">
 </head>
 
 <body>
