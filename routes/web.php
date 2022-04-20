@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('cache.headers:public;max_age=2628000;etag')->group(function () {
+Route::middleware('cache.headers:public;max_age=86400;etag')->group(function () {
     Route::get('/', ['as' => 'landing.show', 'uses' => 'App\Http\Controllers\LandingController@Landing']);
     Route::get('/uk-ico-annual-year-totals', ['as' => 'totals.show', 'uses' => 'App\Http\Controllers\ChartController@Totals']);
     Route::get('/uk-ico-quarterly-year-totals', ['as' => 'quarterlytotals.show', 'uses' => 'App\Http\Controllers\ChartController@QuarterlyTotals']);
