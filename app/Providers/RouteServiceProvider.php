@@ -40,6 +40,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             Route::prefix('api')
                 ->middleware('api')
+                ->middleware('cache.headers:public;max_age=86400;etag') // added this line
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
