@@ -14,6 +14,39 @@ This installation should work on Windows, Mac or Linux. Tested on Windows.
 1. Docker or/and Docker Desktop.
 2. Docker Compose.
 
+### Sample Enviromment file (.env)
+
+```text
+APP_NAME=ico-security-incident-trends
+APP_ENV=local
+APP_KEY=base64:67nhH0J1Mb0hfsrVAlniG33Eh/oRBGq4fFBYGQaPQ3k=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+LOG_CHANNEL=stack
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=ico_data_security_trends
+DB_USERNAME=ico_data_security_trends
+DB_PASSWORD=")HuN3oA_T]AVfr]w"
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+FILESYSTEM_DRIVER=local
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+IGNITION_EDITOR=atom
+IGNITION_THEME=dark
+
+TELESCOPE_ENABLED=true
+```
+
 ### Installation for Development
 
 1. Use git to clone the latest version to your computer.
