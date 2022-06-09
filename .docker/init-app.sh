@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install composer dependencies
-#composer install
+composer install
 echo "Waiting on Database to startup before re-seeding database."
 echo "If you see Error 502 Bad Gateway please wait for the database to seed first it can take a few seconds."
 # # Wait for DB to be up
