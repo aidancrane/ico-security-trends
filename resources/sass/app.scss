@@ -22,3 +22,9 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+// Chart containers need a definite height for Chart.js responsive sizing
+// (percentage heights resolve to 0 because the parent chain has no height).
+.chart-container {
+    height: 70vh;
+}
