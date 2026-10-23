@@ -2,8 +2,11 @@
 
 <head>
     <title>ICO Trends - @yield('title')</title>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @php
+        $viteManifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+    @endphp
+    <script src="{{ asset('build/' . $viteManifest['resources/js/app.js']['file']) }}"></script>
+    <link href="{{ asset('build/' . $viteManifest['resources/sass/app.scss']['file']) }}" rel="stylesheet">
     @stack('scripts')
     <link rel="icon" href="{{ asset('images/favicon.svg') }}" sizes="any" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
