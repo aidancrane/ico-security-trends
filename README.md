@@ -19,7 +19,7 @@ This installation should work on Windows, Mac or Linux. Tested on Windows.
 ```text
 APP_NAME=ico-security-incident-trends
 APP_ENV=local
-APP_KEY=base64:67nhH0J1Mb0hfsrVAlniG33Eh/oRBGq4fFBYGQaPQ3k=
+APP_KEY=
 APP_DEBUG=true
 APP_URL=http://localhost
 
