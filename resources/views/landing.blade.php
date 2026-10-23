@@ -16,16 +16,16 @@
                     <div class="small my-0 py-0">
                         <ul class="list-unstyled my-0 py-0">
                             <li>
-                                <span class="mdi mdi-bookmark-box-multiple"></span> Contains public sector information licensed under the Open Government Licence v3.0
+                                📚 Contains public sector information licensed under the Open Government Licence v3.0
                             </li>
                             <li>
-                                <span class="mdi mdi-book-search"></span> You can access this information first-hand <a href="https://ico.org.uk/action-weve-taken/data-security-incident-trends/previous-reports/">here</a>
+                                🔍 You can access this information first-hand <a href="https://ico.org.uk/action-weve-taken/data-security-incident-trends/previous-reports/">here</a>
                             </li>
                             <li>
-                                <span class="mdi mdi-license"></span> You can read the terms of the OGL v3.0 licence <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
+                                📜 You can read the terms of the OGL v3.0 licence <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
                             </li>
                             <li>
-                                <span class="mdi mdi-rotate-left"></span> Data from <b>Q{{ $lowest_q->quarter_1234 }} {{ $lowest_q->data_range_start }}-{{ $lowest_q->data_range_end }}</b>
+                                🕐 Data from <b>Q{{ $lowest_q->quarter_1234 }} {{ $lowest_q->data_range_start }}-{{ $lowest_q->data_range_end }}</b>
                                 to <b>Q{{ $highest_q->quarter_1234 }} {{ $highest_q->data_range_start }}-{{ $highest_q->data_range_end }}</b>
                             </li>
                         </ul>

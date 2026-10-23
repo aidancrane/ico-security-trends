@@ -44,7 +44,7 @@
                                 <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="https://github.com/aidancrane/ico-security-trends">Source Code <span class="mdi mdi-launch"></span></a>
+                                <a class="nav-link" href="https://github.com/aidancrane/ico-security-trends">Source Code ↗</a>
                             </li>
                         </ul>
                     </div>
@@ -64,18 +64,18 @@
         <div class="row">
             <div class="col-md-9">
                 <div>
-                    <span class="text-muted"><span class="mdi mdi-bookmark-box-multiple"></span> Contains public sector information licensed under the Open Government Licence v3.0</span>
+                    <span class="text-muted">📚 Contains public sector information licensed under the Open Government Licence v3.0</span>
                 </div>
                 <div>
-                    <span class="text-muted"><span class="mdi mdi-web"></span> Maintained by <i><a href="https://infinityflame.co.uk">Aidan Crane</a></i> and contributors</span>
+                    <span class="text-muted">🌐 Maintained by <i><a href="https://infinityflame.co.uk">Aidan Crane</a></i> and contributors</span>
                 </div>
             </div>
             <div class="col-md-3">
                 <div>
-                    <span class="text-muted"><span class="mdi mdi-progress-check"></span> Version <b>{{ env('ICO_VERSION', '1.0.0') }}</b></span>
+                    <span class="text-muted">✅ Version <b>{{ env('ICO_VERSION', '1.0.0') }}</b></span>
                 </div>
                 <div>
-                    <span class="text-muted"><span class="mdi mdi-cached"></span> Cached at <b>{{ time() }}</b></span>
+                    <span class="text-muted">⚡ Cached at <b>{{ time() }}</b></span>
                 </div>
             </div>
         </div>

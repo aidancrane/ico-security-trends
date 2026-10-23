@@ -7,7 +7,7 @@
             <ol class="list-group mt-4">
                 <a href="/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
-                        <div class="fw-bold"><span class="mdi mdi-arrow-left-thin"></span> Back</div>
+                        <div class="fw-bold">⬅️ Back</div>
                     </div>
                 </a>
                 <a href="/uk-ico-annual-year-totals" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
